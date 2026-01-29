@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gieo Quẻ AIVA 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'tet-red': '#D00000',
+              'tet-gold': '#FFD700',
+              'tet-dark': '#8B0000',
+              'tet-bg': '#570000',
+            },
+            fontFamily: {
+              'handwriting': ['"Dancing Script"', 'cursive'],
+              'serif': ['"Playfair Display"', 'serif'],
+            },
+            animation: {
+              'shake-hard': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-2px, 0, 0) rotate(-5deg)' },
+                '20%, 80%': { transform: 'translate3d(4px, 0, 0) rotate(5deg)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-8px, 0, 0) rotate(-10deg)' },
+                '40%, 60%': { transform: 'translate3d(8px, 0, 0) rotate(10deg)' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              glow: {
+                'from': { boxShadow: '0 0 10px #FFD700' },
+                'to': { boxShadow: '0 0 30px #FFD700, 0 0 10px #FFA500' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body class="bg-tet-bg text-white overflow-x-hidden antialiased">
+    <div id="root"></div>
+  </body>
+</html>
